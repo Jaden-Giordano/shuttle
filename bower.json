@@ -1,0 +1,14 @@
+{
+  "name": "shuttle",
+  "description": "",
+  "main": "src/scripts/app.js",
+  "authors": [
+    "Jaden Giordano"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
