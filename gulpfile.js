@@ -12,7 +12,7 @@ const bases = {
 }
 
 const paths = {
-  app: ['app/**/*.js'],
+  app: ['app/**/*'],
   html: 'index.html',
   style: 'styles/main.styl'
 }
