@@ -16,8 +16,8 @@ const bases = {
 const paths = {
   modules: 'node_modules/**',
   app: ['app/**'],
-  html: 'index.html',
-  style: 'styles/main.styl'
+  html: 'public/views/index.html',
+  style: 'public/styles/main.styl'
 }
 
 gulp.task('clean', () => {
