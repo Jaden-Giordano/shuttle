@@ -2,9 +2,9 @@
   "name": "shuttle",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "electron ./dist"
+    "start": "electron ./dist/"
   },
   "author": "Jaden Giordano",
   "license": "ISC",
