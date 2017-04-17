@@ -2,17 +2,20 @@ const gulp = require('gulp');
 const browserify = require('browserify');
 const babelify = require('babelify');
 const stylus = require('gulp-stylus');
+//const electron = reqiure('gulp-electron');
 
 const source = require('vinyl-source-stream');
 const clean = require('gulp-clean');
 
 const bases = {
+  base: './',
   src: 'src/',
   dist: 'dist/'
 }
 
 const paths = {
-  app: ['app/**/*'],
+  modules: 'node_modules/**',
+  app: ['app/**'],
   html: 'index.html',
   style: 'styles/main.styl'
 }
@@ -37,7 +40,7 @@ gulp.task('compile', ['clean'], () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('styles', () => {
+gulp.task('styles', ['clean'], () => {
   return gulp.src(paths.style, {cwd: bases.src})
     .pipe(stylus())
     .pipe(gulp.dest(bases.dist));
