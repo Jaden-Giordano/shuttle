@@ -35,7 +35,8 @@ gulp.task('lint', () => {
     })
     .pipe(eslint({
       parserOptions: {
-        ecmaVersion: 6
+        ecmaVersion: 6,
+        sourceType: 'module'
       },
       rules: {
         indent: ['error', 2],
@@ -52,9 +53,6 @@ gulp.task('compile', ['clean'], () => {
       entries: paths.compileStart,
       extensions: ['.js'],
       debug: true
-    })
-    .plugin('browserify-bower', {
-      require: ['*']
     })
     .transform(babelify, {
       presets: ['es2015']
