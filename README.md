@@ -7,17 +7,15 @@ Check out the issue, and look at the milestones for what is needed to be done fo
 ### Setup
 Node will need to be installed to contribute to this project.
 
-You will also need to install bower and gulp-cli globally.
+You will also need to install gulp-cli globally.
 
 ```
-npm i -g bower
 npm i -g gulp-cli
 ```
 
 Once installed, install all the dependencies.
 ```
 npm i
-bower i
 ```
 
 #### Building the project
