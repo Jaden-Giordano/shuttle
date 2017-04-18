@@ -15,6 +15,7 @@
     "browserify": "^14.3.0",
     "browserify-bower": "^0.6.1",
     "gulp-clean": "^0.3.2",
+    "gulp-eslint": "^3.0.1",
     "gulp-stylus": "^2.6.0",
     "vinyl-source-stream": "^1.1.0"
   },
