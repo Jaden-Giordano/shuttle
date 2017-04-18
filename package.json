@@ -2,8 +2,9 @@
   "name": "shuttle",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app/main.js",
   "scripts": {
+    "build": "gulp",
     "start": "electron ./dist/"
   },
   "author": "Jaden Giordano",
