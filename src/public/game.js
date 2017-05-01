@@ -1,17 +1,11 @@
-window.PIXI = require('phaser/build/custom/pixi');
-window.p2 = require('phaser/build/custom/p2');
-window.Phaser = require('phaser/build/custom/phaser-split');
+import Main from './states/main.js';
 
-var game = new Phaser.Game(800, 800, Phaser.AUTO, '', {
-  preload: () => {
+class Game extends Phaser.Game {
+  constructor() {
+    super(window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, Phaser.AUTO);
 
-  },
-  create: () => {
-
-  },
-  update: () => {
-
+    this.state.add('Main', Main, false);
   }
-});
+}
 
-export default game;
+export default Game;
