@@ -19,7 +19,8 @@ const paths = {
   app: ['app/**'],
   html: 'public/views/index.html',
   style: 'public/styles/main.styl',
-  compileStart: './src/public/main.js'
+  compileStart: './src/public/main.js',
+  assets: 'assets/**';
 }
 
 gulp.task('clean', () => {
@@ -74,6 +75,11 @@ gulp.task('copy', ['clean'], () => {
   gulp.src(paths.app, {
       cwd: bases.src
     })
+    .pipe(gulp.dest(bases.dist));
+
+  gulp.src(paths.assets, {
+    cwd: bases.src
+  })
     .pipe(gulp.dest(bases.dist));
 
   return gulp.src(paths.html, {
