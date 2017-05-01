@@ -42,7 +42,7 @@ gulp.task('lint', () => {
       rules: {
         indent: ['error', 2],
         semi: ['error', 'always'],
-        'linebreak-style': ['error', 'windows'],
+        'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single']
       }
     }))
