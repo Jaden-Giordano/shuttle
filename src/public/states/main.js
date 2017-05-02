@@ -1,10 +1,8 @@
-window.PIXI = require('phaser/build/custom/pixi');
-window.p2 = require('phaser/build/custom/p2');
-window.Phaser = require('phaser/build/custom/phaser-split');
+import Tile from '../objects/tiles/tile';
 
 class Main extends Phaser.State {
   create() {
-
+    this.testTile = new Tile(this.game, 0, 0, 0, 'FloorTiles');
   }
 
   update() {
