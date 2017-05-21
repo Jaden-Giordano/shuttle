@@ -1,9 +1,11 @@
 import Tile from '../objects/tiles/tile';
+import TileLoader from '../loaders/tile-loader';
 
 class Main extends Phaser.State {
   create() {
-    this.testTile = new Tile(this.game, 0, 0, 'FloorTiles', 0);
-    this.testTile2 = new Tile(this.game, 16, 0, 'FloorTiles', 1);
+    let map = this.game.cache.getJSON('map');
+    let tiles = TileLoader.loadTiles(this.game, map.tiles, 0, 0, map.width, map.height);
+    console.log(tiles);
   }
 
   update() {
