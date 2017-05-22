@@ -1,18 +1,17 @@
-const gulp = require('gulp');
-const browserify = require('browserify');
-const babelify = require('babelify');
-const stylus = require('gulp-stylus');
-//const electron = reqiure('gulp-electron');
-const eslint = require('gulp-eslint');
+const gulp = require('gulp'); // eslint-disable-line no-undef
+const browserify = require('browserify'); // eslint-disable-line no-undef
+const babelify = require('babelify'); // eslint-disable-line no-undef
+const stylus = require('gulp-stylus'); // eslint-disable-line no-undef
+const eslint = require('gulp-eslint'); // eslint-disable-line no-undef
 
-const source = require('vinyl-source-stream');
-const clean = require('gulp-clean');
+const source = require('vinyl-source-stream'); // eslint-disable-line no-undef
+const clean = require('gulp-clean'); // eslint-disable-line no-undef
 
 const bases = {
   base: './',
   src: 'src/',
   dist: 'dist/'
-}
+};
 
 const paths = {
   modules: 'node_modules/**',
@@ -21,40 +20,31 @@ const paths = {
   style: 'public/styles/main.styl',
   compileStart: './src/public/main.js',
   assets: 'assets/**'
-}
+};
 
 gulp.task('clean', () => {
   return gulp.src(bases.dist, {
-      read: false
-    })
+    read: false
+  })
     .pipe(clean());
 });
 
 gulp.task('lint', () => {
   return gulp.src('**/*.js', {
-      cwd: bases.src
-    })
+    cwd: bases.src
+  })
     .pipe(eslint({
-      parserOptions: {
-        ecmaVersion: 6,
-        sourceType: 'module'
-      },
-      rules: {
-        indent: ['error', 2],
-        semi: ['error', 'always'],
-        'linebreak-style': ['error', 'unix'],
-        quotes: ['error', 'single']
-      }
+      rulePaths: [bases.base]
     }))
     .pipe(eslint.format());
 });
 
 gulp.task('compile', ['clean'], () => {
   return browserify({
-      entries: paths.compileStart,
-      extensions: ['.js'],
-      debug: true
-    })
+    entries: paths.compileStart,
+    extensions: ['.js'],
+    debug: true
+  })
     .transform(babelify, {
       presets: ['es2015']
     })
@@ -65,16 +55,16 @@ gulp.task('compile', ['clean'], () => {
 
 gulp.task('styles', ['clean'], () => {
   return gulp.src(paths.style, {
-      cwd: bases.src
-    })
+    cwd: bases.src
+  })
     .pipe(stylus())
     .pipe(gulp.dest(bases.dist));
-})
+});
 
 gulp.task('copy', ['clean'], () => {
   gulp.src(paths.app, {
-      cwd: bases.src
-    })
+    cwd: bases.src
+  })
     .pipe(gulp.dest(bases.dist));
 
   gulp.src(paths.assets, {
@@ -83,8 +73,8 @@ gulp.task('copy', ['clean'], () => {
     .pipe(gulp.dest(bases.dist + 'assets/'));
 
   return gulp.src(paths.html, {
-      cwd: bases.src
-    })
+    cwd: bases.src
+  })
     .pipe(gulp.dest(bases.dist));
 });
 
