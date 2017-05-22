@@ -1,6 +1,8 @@
+/* eslint-disable no-undef */
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
+/* eslint-enable */
 
 let win;
 

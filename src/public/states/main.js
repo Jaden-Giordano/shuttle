@@ -1,4 +1,3 @@
-import Tile from '../objects/tiles/tile';
 import TileLoader from '../loaders/tile-loader';
 
 class Main extends Phaser.State {
