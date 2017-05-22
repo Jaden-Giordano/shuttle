@@ -1,10 +1,11 @@
-import TileLoader from '../loaders/tile-loader';
+import Constants from '../constants';
 
 class Main extends Phaser.State {
   create() {
-    let map = this.game.cache.getJSON('map');
-    let tiles = TileLoader.loadTiles(this.game, map.tiles, 0, 0, map.width, map.height, 'FloorTiles');
-    console.log(tiles);
+    let map = this.game.add.tilemap('test');
+    map.addTilesetImage('FloorTiles', 'FloorTilesImage');
+    let layer = map.createLayer('Tile Layer 1');
+    layer.scale = new Phaser.Point(Constants.TILE_SCALE, Constants.TILE_SCALE);
   }
 
   update() {
