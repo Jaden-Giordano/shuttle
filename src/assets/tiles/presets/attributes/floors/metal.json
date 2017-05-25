@@ -1,26 +1,26 @@
 {
-  "Blocking": false,
-  "Moveable": false,
-  "Item": false,
-  "Description": "It's a shiny metal tile...",
-  "Sound": {
-    "Walking": "/sounds/material/tile/walk.wav",
-    "Hit": "/sounds/material/metal/hit.wav"
+  "blocking": false,
+  "moveable": false,
+  "item": false,
+  "description": "It's a shiny metal tile...",
+  "sound": {
+    "walking": "/sounds/material/tile/walk.wav",
+    "hit": "/sounds/material/metal/hit.wav"
   },
-  "Durability": -1,
-  "Interactions": [
+  "durability": -1,
+  "interactions": [
     {
-      "Name": "Remove",
-      "Require": [
-        "base.crowbar"
+      "name": "Remove",
+      "require": [
+        "base.item.crowbar"
       ]
     }
   ],
-  "Animations": [
+  "animations": [
     {
-      "Name": "Idle",
-      "StartingPos": 5,
-      "EndingPos": 5
+      "name": "Idle",
+      "startingPos": 5,
+      "endingPos": 5
     }
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "reference": "presets/attributes/floors/metal.json"
+  "name": "floor.metal-floor",
+  "display_Name": "metal floor"
+  "initial_State": 5
+}
