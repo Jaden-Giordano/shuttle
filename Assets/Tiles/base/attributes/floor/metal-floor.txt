@@ -1,5 +1,0 @@
-{
-  "Reference": "presets/attributes/floors/metal.json"
-  "Name": "floor.metal-floor",
-  "Display-name": "metal floor"
- }
