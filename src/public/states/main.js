@@ -1,9 +1,11 @@
-import Tile from '../objects/tiles/tile';
+import Constants from '../constants';
 
 class Main extends Phaser.State {
   create() {
-    this.testTile = new Tile(this.game, 0, 0, 'FloorTiles', 0);
-    this.testTile2 = new Tile(this.game, 16, 0, 'FloorTiles', 1);
+    let map = this.game.add.tilemap('test');
+    map.addTilesetImage('FloorTiles', 'FloorTilesImage');
+    let layer = map.createLayer('Tile Layer 1');
+    layer.scale = new Phaser.Point(Constants.TILE_SCALE, Constants.TILE_SCALE);
   }
 
   update() {

@@ -1,0 +1,26 @@
+{
+  "blocking": false,
+  "moveable": false,
+  "item": false,
+  "description": "It's a shiny metal tile...",
+  "sound": {
+    "walking": "/sounds/material/tile/walk.wav",
+    "hit": "/sounds/material/metal/hit.wav"
+  },
+  "durability": -1,
+  "interactions": [
+    {
+      "name": "Remove",
+      "require": [
+        "base.item.crowbar"
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "name": "Idle",
+      "startingPos": 5,
+      "endingPos": 5
+    }
+  ]
+}
