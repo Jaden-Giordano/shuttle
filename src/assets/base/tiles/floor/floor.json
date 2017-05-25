@@ -1,0 +1,12 @@
+{
+  "name": "Floor",
+  "displayName": "Floor",
+  "blocking": false,
+  "moveable": false,
+  "interactions": [{
+    "name": "Remove",
+    "require": [
+      "base.item.crowbar"
+    ]
+  }]
+}

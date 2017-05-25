@@ -1,0 +1,7 @@
+{
+  "name": "MetalFloor",
+  "displayName": "Metal Floor",
+  "extends": "base.tiles.floor.Floor",
+  "material": "base.materials.Metal",
+  "initialState": 5
+}
