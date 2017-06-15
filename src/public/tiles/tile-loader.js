@@ -1,8 +1,15 @@
 /* eslint-disable */
+var tileRegistry;
+
+function loadTileRegistry() {
+
+}
+
 function setupTile(tile) {
   
 }
 
 export default {
-  setup: setupTile
+  setup: setupTile,
+  loadTileRegistry: loadTileRegistry
 };
