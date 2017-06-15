@@ -11,7 +11,7 @@ class Main extends Phaser.State {
     TileLoader.loadTileRegistry();
 
     map.forEach(function(tile) {
-      TileLoader.setup(tile);
+      TileLoader.setup(this.game, tile);
     });
   }
 
