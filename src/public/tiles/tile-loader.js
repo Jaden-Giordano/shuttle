@@ -1,12 +1,12 @@
 /* eslint-disable */
 var tileRegistry;
 
-function loadTileRegistry() {
-
+function loadTileRegistry(game) {
+  tileRegistry = game.cache.getJSON('tileRegistry');
 }
 
 function setupTile(tile) {
-  
+
 }
 
 export default {
