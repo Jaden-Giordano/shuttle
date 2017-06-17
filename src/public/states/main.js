@@ -1,5 +1,6 @@
 import Constants from '../constants';
 import TileLoader from '../tiles/tile-loader';
+import AssetLoader from '../asset-loader';
 
 class Main extends Phaser.State {
   create() {
@@ -8,13 +9,13 @@ class Main extends Phaser.State {
     let layer = map.createLayer('Tile Layer 1');
     layer.scale = new Phaser.Point(Constants.TILE_SCALE, Constants.TILE_SCALE);
 
+
     TileLoader.loadTileRegistry(this.game);
 
     map.forEach(function(tile) {
       TileLoader.setup(tile);
     });
 
-    console.log(Constants.getAssetsDirectory());
   }
 
   update() {
