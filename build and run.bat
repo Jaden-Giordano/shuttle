@@ -1,5 +1,6 @@
 @echo off
+TITLE Building...
 call gulp
 cls
-echo Shuttle Start
+TITLE Shuttle npm cli
 npm start
