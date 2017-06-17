@@ -2,9 +2,8 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const url = require('url');
-assetConstructor = require('./assetConstructor');
+const assetConstructor = require('./assetConstructor');
 /* eslint-enable */
-assetConstructor.constructAssets();
 
 let win;
 
@@ -34,6 +33,8 @@ app.on('window-all-closed', () => {
 });
 
 app.on('activate', () => {
+  console.log('ayyyeyeyeyeyye');
+  assetConstructor.constructAssets();
   if (win == null) {
     createWindow();
   }
