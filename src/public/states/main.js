@@ -13,6 +13,8 @@ class Main extends Phaser.State {
     map.forEach(function(tile) {
       TileLoader.setup(tile);
     });
+
+    console.log(Constants.getAssetsDirectory());
   }
 
   update() {

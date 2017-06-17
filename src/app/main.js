@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const url = require('url');
 /* eslint-enable */
@@ -35,4 +35,8 @@ app.on('activate', () => {
   if (win == null) {
     createWindow();
   }
+});
+
+ipcMain.on('getAssetsDirectory', (event) => {
+  event.returnValue = path.join(__dirname, 'assets/');
 });
