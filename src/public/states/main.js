@@ -1,6 +1,6 @@
 import Constants from '../constants';
 import TileLoader from '../tiles/tile-loader';
-import AssetLoader from '../asset-loader';
+//import AssetLoader from '../asset-loader';
 
 class Main extends Phaser.State {
   create() {

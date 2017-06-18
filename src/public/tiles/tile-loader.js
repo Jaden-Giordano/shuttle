@@ -9,8 +9,8 @@ function setupTile(tile) {
 
 
   //tile.attributes =
-  console.log(tileRegistry);
-  console.log(tile.index);
+  //console.log(tileRegistry);
+  //console.log(tile.index);
 }
 
 export default {
