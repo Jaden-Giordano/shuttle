@@ -1,12 +1,12 @@
 import Constants from './constants';
 
-let mods = {};
+//let mods = {};
 
 function loadMods(){
 }
 
 function getMods(){
-  return mods;
+  //return mods;
 }
 
 export default {
