@@ -22,14 +22,12 @@ function createWindow() {
   win.on('close', () => {
     win = null;
   });
-}
 
-app.on('ready', () => {
   console.log('ayyyeyeyeyeyye');
   AssetLoader.loadAssets();
+}
 
-  createWindow();
-});
+app.on('ready', createWindow);
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

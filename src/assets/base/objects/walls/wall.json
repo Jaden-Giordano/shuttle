@@ -1,0 +1,13 @@
+{
+  "name": "Wall",
+  "displayName": "Wall",
+  "blocking": true,
+  "moveable": false,
+  "interactions": [{
+    "name": "Remove",
+    "require": [
+      "base.object.item.screwdriver",
+      "base.object.item.crowbar"
+    ]
+  }]
+}
