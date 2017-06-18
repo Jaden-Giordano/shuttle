@@ -14,16 +14,19 @@ function getDirectories(srcpath) {
 function loadAssets() {
   console.log('Assets.base.tileRegistry');
   let dirs = [];
-  dirs = getDirectories(path.join(__dirname, 'assets/'));
+  dirs = getDirectories(assetsFolder);
 
   if (dirs.indexOf('base') == -1) {
     throw 'BASE ASSETS NOT FOUND!';
   }
 
   for (var i = 0; i < dirs.length; i++) {
-    let assetdirs = getDirectories(path.join(__dirname, 'assets/' + dirs[i] + "/")
+    let assetdirs = getDirectories(path.join(assetsFolder, dirs[i] + "/")
     Assets[dirs[i]] = {}
-    Assets[dirs[i]].manifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'assets/' + dirs[i] + '/manifest.json')).toString())
+    Assets[dirs[i]].manifest = JSON.parse(fs.readFileSync(path.join(assetsFolder, dirs[i] + '/manifest.json')).toString())
+    if(assetdirs.indexOf('maps')){
+      
+    }
   }
 
   console.log(Assets.base.tileRegistry);
