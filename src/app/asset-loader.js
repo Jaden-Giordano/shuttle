@@ -25,7 +25,7 @@ function loadAssets() {
     Assets[dirs[i]].manifest = JSON.parse(fs.readFileSync(path.join(assetsFolder, dirs[i] + '/manifest.json')).toString());
   }
 
-  console.log(Assets.base.tileRegistry);
+  console.log(Assets.base.manifest);
 }
 
 /* eslint-disable */
