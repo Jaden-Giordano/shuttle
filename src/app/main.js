@@ -27,7 +27,7 @@ function createWindow() {
 app.on('ready', () => {
   console.log('ayyyeyeyeyeyye');
   AssetLoader.loadAssets();
-  
+
   createWindow();
 });
 
