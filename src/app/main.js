@@ -2,7 +2,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const url = require('url');
-const assetConstructor = require('./assetConstructor');
+const assetConstructor = require('./asset-constructor');
 /* eslint-enable */
 
 let win;
