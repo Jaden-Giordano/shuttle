@@ -24,7 +24,11 @@ function createWindow() {
   });
 }
 
-app.on('ready', createWindow);
+app.on('ready', () => {
+  console.log('ayyyeyeyeyeyye');
+  assetConstructor.constructAssets();
+  createWindow();
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -33,8 +37,6 @@ app.on('window-all-closed', () => {
 });
 
 app.on('activate', () => {
-  console.log('ayyyeyeyeyeyye');
-  assetConstructor.constructAssets();
   if (win == null) {
     createWindow();
   }
