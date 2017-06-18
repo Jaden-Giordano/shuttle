@@ -1,0 +1,27 @@
+[
+  {
+    "tileset": "base.sprites.floor.FloorTiles",
+    "tileID": 0,
+    "properties": "base.objects.floor.Floor"
+  },
+  {
+    "tileset": "base.sprites.floor.FloorTiles",
+    "tileID": 1,
+    "properties": "base.objects.floor.Floor"
+  },
+  {
+    "tileset": "base.sprites.floor.FloorTiles",
+    "tileID": 2,
+    "properties": "base.objects.floor.MetalFloor"
+  },
+  {
+    "tileset": "base.sprites.floor.FloorTiles",
+    "tileID": 3,
+    "properties": "base.objects.floor.MetalFloor"
+  },
+  {
+    "tileset": "base.sprites.floor.FloorTiles",
+    "tileID": 4,
+    "properties": "base.objects.floor.MetalFloor"
+  }
+]
