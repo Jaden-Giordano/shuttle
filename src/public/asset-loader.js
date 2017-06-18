@@ -1,4 +1,4 @@
-import constants from './constants'
+import Constants from './constants';
 
 let mods = {};
 
