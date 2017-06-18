@@ -1,27 +1,30 @@
 [
   {
-    "tileset": "base.sprites.floor.FloorTiles",
-    "tileID": 0,
+    "sheet": "base.sprites.floor.CheckeredFloorTiles",
+    "spriteIDs": {
+      "range": [0, 19]
+    },
     "properties": "base.objects.floor.Floor"
   },
   {
-    "tileset": "base.sprites.floor.FloorTiles",
-    "tileID": 1,
-    "properties": "base.objects.floor.Floor"
-  },
-  {
-    "tileset": "base.sprites.floor.FloorTiles",
-    "tileID": 2,
+    "sheet": "base.sprites.floor.CheckeredFloorTiles",
+    "spriteIDs": {
+      "range": [20, 39]
+    },
     "properties": "base.objects.floor.MetalFloor"
   },
   {
-    "tileset": "base.sprites.floor.FloorTiles",
-    "tileID": 3,
-    "properties": "base.objects.floor.MetalFloor"
+    "sheet": "base.sprites.walls.WallTiles",
+    "spriteIDs": {
+      "range": [0, 19]
+    },
+    "properties": "base.objects.walls.MetalWall"
   },
   {
-    "tileset": "base.sprites.floor.FloorTiles",
-    "tileID": 4,
-    "properties": "base.objects.floor.MetalFloor"
+    "sheet": "base.sprites.walls.WallTiles",
+    "spriteIDs": {
+      "range": [20, 39]
+    },
+    "properties": "base.objects.walls.Wall"
   }
 ]
