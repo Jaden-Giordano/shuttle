@@ -23,8 +23,9 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "electron": "^1.6.2",
     "extract-zip": "=1.6.0",
-    "electron": "^1.6.2"
+    "node-dir": "^0.1.17"
   },
   "repository": {
     "type": "git",
