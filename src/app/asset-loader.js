@@ -1,7 +1,6 @@
 /* eslint-disable */
 const fs = require('fs');
 const path = require('path');
-
 const assetsFolder = path.join(__dirname, 'assets/');
 /* eslint-enable */
 
@@ -21,12 +20,9 @@ function loadAssets() {
   }
 
   for (var i = 0; i < dirs.length; i++) {
-    let assetdirs = getDirectories(path.join(assetsFolder, dirs[i] + "/")
-    Assets[dirs[i]] = {}
-    Assets[dirs[i]].manifest = JSON.parse(fs.readFileSync(path.join(assetsFolder, dirs[i] + '/manifest.json')).toString())
-    if(assetdirs.indexOf('maps')){
-      
-    }
+    let assetdirs = getDirectories(path.join(assetsFolder, dirs[i] + '/'));
+    Assets[dirs[i]] = {};
+    Assets[dirs[i]].manifest = JSON.parse(fs.readFileSync(path.join(assetsFolder, dirs[i] + '/manifest.json')).toString());
   }
 
   console.log(Assets.base.tileRegistry);
