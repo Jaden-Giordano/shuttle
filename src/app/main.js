@@ -2,7 +2,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const url = require('url');
-const assetConstructor = require('./asset-constructor');
+const AssetLoader = require('./asset-loader');
 /* eslint-enable */
 
 let win;
@@ -26,7 +26,7 @@ function createWindow() {
 
 app.on('ready', () => {
   console.log('ayyyeyeyeyeyye');
-  assetConstructor.constructAssets();
+  AssetLoader.constructAssets();
   createWindow();
 });
 
