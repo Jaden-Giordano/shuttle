@@ -1,11 +1,20 @@
 /* eslint-disable no-undef */
 const { app, BrowserWindow, ipcMain } = require('electron');
+const fs = require('fs');
 const path = require('path');
 const url = require('url');
 const AssetLoader = require('./asset-loader');
+const { Console } = require('console');
+const output = fs.createWriteStream('./stdout.log');
+const errorOutput = fs.createWriteStream('./stderr.log');
+// custom simple logger
+const logger = new Console(output, errorOutput);
+// use it like console
 /* eslint-enable */
 
 let win;
+
+logger.log('count:');
 
 function createWindow() {
   win = new BrowserWindow({
@@ -39,8 +48,4 @@ app.on('activate', () => {
   if (win == null) {
     createWindow();
   }
-});
-
-ipcMain.on('getAssetsDirectory', (event) => {
-  event.returnValue = path.join(__dirname, 'assets/');
 });

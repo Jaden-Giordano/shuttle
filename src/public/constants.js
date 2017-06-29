@@ -1,14 +1,7 @@
-var assetsDirectory = null;
-
-function getAssetsDirectory() {
-  if (assetsDirectory === null) {
-    assetsDirectory = ipcRenderer.sendSync('getAssetsDirectory');
-  }
-  return assetsDirectory;
-}
+const assetsPath = path.join(window.__dirname, 'assets/');
 
 export default {
   TILE_SCALE: 3,
   TILE_SIZE: 32,
-  getAssetsDirectory: getAssetsDirectory
+  ASSETS_PATH: assetsPath
 };

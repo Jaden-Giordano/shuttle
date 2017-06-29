@@ -5,7 +5,7 @@
   "main": "src/app/main.js",
   "scripts": {
     "build": "gulp",
-    "start": "electron ./dist/"
+    "start": "D:/Projects/shuttle/node_modules/electron/dist/electron.exe ./dist/"
   },
   "author": "Jaden Giordano",
   "license": "ISC",
