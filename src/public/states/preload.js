@@ -1,6 +1,11 @@
+import assetloader from '../asset-loader'
+
 class Preload extends Phaser.State {
   preload() {
-    this.game.load.tilemap('test', 'assets/maps/test.json', null, Phaser.Tilemap.TILED_JSON);
+
+    console.log(assetloader.loadMods());
+
+    this.game.load.tilemap('test', 'assets/base/maps/test.json', null, Phaser.Tilemap.TILED_JSON);
 
     this.game.load.json('tileRegistry', 'assets/base/tile-registry.json');
 

@@ -1,0 +1,30 @@
+[
+  {
+    "sheet": "base.sprites.floor.CheckeredFloorTiles",
+    "spriteIDs": {
+      "range": [0, 19]
+    },
+    "properties": "base.objects.floor.Floor"
+  },
+  {
+    "sheet": "base.sprites.floor.CheckeredFloorTiles",
+    "spriteIDs": {
+      "range": [20, 39]
+    },
+    "properties": "base.objects.floor.MetalFloor"
+  },
+  {
+    "sheet": "base.sprites.walls.WallTiles",
+    "spriteIDs": {
+      "range": [0, 19]
+    },
+    "properties": "base.objects.walls.MetalWall"
+  },
+  {
+    "sheet": "base.sprites.walls.WallTiles",
+    "spriteIDs": {
+      "range": [20, 39]
+    },
+    "properties": "base.objects.walls.Wall"
+  }
+]

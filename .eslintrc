@@ -25,3 +25,4 @@ globals:
   __dirname: false
   process: false
   console: false
+  ipcRenderer: false
