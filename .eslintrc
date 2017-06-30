@@ -28,3 +28,4 @@ globals:
   ipcRenderer: false
   fs: false
   path: false
+  require: false
