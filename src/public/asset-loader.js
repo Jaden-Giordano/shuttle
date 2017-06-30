@@ -51,17 +51,17 @@ function walkFoldersOfPath(folder){
       break;
     }
   }
-  let assetObject = {};
+  let assetsObject = {};
   let dirs = getDirectories(folder);
   let files = getFiles(folder);
-  for(let i = 0; i < dirs.length; i++){
-    assetObject[dirs[i]] = Object();
-    assetObject[dirs[i]] = walkFoldersOfPath(path.join(folder, dirs[i] + '/'));
+  for(let i = 0; i < dirs.length; i++) {
+    assetsObject[dirs[i]] = Object();
+    assetsObject[dirs[i]] = walkFoldersOfPath(path.join(folder, dirs[i] + '/'));
   }
-  for(let i = 0; i < files.length; i++){
-    assetObject[files[i]] = folder.replace(assetsFolder, '').replace(/\//g, '.') + files[i];
+  for(let i = 0; i < files.length; i++) {
+    assetsObject[files[i].split('.')[0]] = folder.replace(assetsFolder, '').replace(/\//g, '.') + files[i];
   }
-  return assetObject;
+  return assetsObject;
 }
 
 export default {
