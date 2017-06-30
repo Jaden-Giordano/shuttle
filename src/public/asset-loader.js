@@ -2,7 +2,6 @@ import Constants from './constants';
 
 const assetsFolder = Constants.ASSETS_PATH;
 
-
 var Assets = {};
 
 function getDirectories(srcpath) {
@@ -13,7 +12,7 @@ function getFiles(srcpath) {
   return fs.readdirSync(srcpath).filter(file => fs.lstatSync(path.join(srcpath, file)).isFile());
 }
 
-function loadMods() {
+function loadAssets() {
   let dirs = [];
   dirs = getDirectories(assetsFolder);
 
@@ -26,7 +25,6 @@ function loadMods() {
   console.log(JSON.stringify(mods, null, 4));
 
   for (var i = 0; i < dirs.length; i++) {
-    let assetdirs = getDirectories(path.join(assetsFolder, dirs[i] + '/'));
     Assets[dirs[i]] = {};
     Assets[dirs[i]].manifest = JSON.parse(fs.readFileSync(path.join(assetsFolder, dirs[i] + '/manifest.json')).toString());
   }
@@ -36,21 +34,21 @@ function loadMods() {
 
 function walkFoldersOfPath(folder){
   let splitpaths = folder.replace(assetsFolder, '').replace(/\\/g, '/').split('/');
-  let assetfilter = '';
+  let assetFilter = ''; // eslint-disable-line no-unused-vars
   if(splitpaths.length > 2){
     switch(splitpaths[1]){
-      case 'maps':
-          assetfilter = splitpaths[1];
-        break;
-      case 'objects':
-          assetfilter = splitpaths[1];
-        break;
-      case 'sprites':
-          assetfilter = splitpaths[1];
-        break;
-      case 'sounds':
-          assetfilter = splitpaths[1];
-        break;
+    case 'maps':
+      assetFilter = splitpaths[1];
+      break;
+    case 'objects':
+      assetFilter = splitpaths[1];
+      break;
+    case 'sprites':
+      assetFilter = splitpaths[1];
+      break;
+    case 'sounds':
+      assetFilter = splitpaths[1];
+      break;
     }
   }
   let assetObject = {};
@@ -67,5 +65,5 @@ function walkFoldersOfPath(folder){
 }
 
 export default {
-  loadMods: loadMods
+  loadAssets: loadAssets
 };
