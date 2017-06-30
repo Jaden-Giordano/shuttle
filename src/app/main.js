@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow } = require('electron');
 const fs = require('fs');
 const path = require('path');
 const url = require('url');

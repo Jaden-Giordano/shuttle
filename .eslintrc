@@ -26,3 +26,5 @@ globals:
   process: false
   console: false
   ipcRenderer: false
+  fs: false
+  path: false

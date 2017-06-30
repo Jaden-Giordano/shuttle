@@ -1,4 +1,4 @@
-import assetloader from '../asset-loader'
+import assetloader from '../asset-loader';
 
 class Preload extends Phaser.State {
   preload() {
